@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+}
+
+body {
+  background: rgb(42, 42, 42);
+}
+
+div.title {
+  display: block;
+  text-align: center;
+  margin: 50px 30px;
+}
+
+section.states {
+  margin: auto;
+  max-width: 70%;
+  margin-bottom: 40px;
+}
+section.states div.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(51, 51, 51);
+  border: 1px solid black;
+  padding: 20px 20px;
+}
+section.states div.container h2 {
+  font-weight: 500;
+  font-size: 17px;
+}
+section.states div.container p {
+  font-weight: 300;
+  font-size: 13px;
+}
+section.states div.container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.states div.container div span {
+  margin-left: 10px;
+  position: relative;
+  z-index: 0;
+}
+section.states div.container div span::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  background-color: gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.states div.container div div.led1 {
+  width: 15px;
+  height: 15px;
+  background: rgb(0, 255, 0);
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 4px green;
+}
+section.states div.container div div.led2 {
+  width: 15px;
+  height: 15px;
+  background: rgb(0, 255, 0);
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 4px rgb(0, 172, 0);
+  -webkit-animation: led2 1s linear infinite;
+          animation: led2 1s linear infinite;
+}
+section.states div.container div div.led3 {
+  width: 15px;
+  height: 15px;
+  background: #f1c40f;
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 2px rgb(130, 109, 0);
+}
+section.states div.container div div.led4 {
+  width: 15px;
+  height: 15px;
+  background: rgb(96, 106, 255);
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 5px rgb(0, 40, 148);
+}
+section.states div.container div div.led5 {
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 123, 0);
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 4px rgb(107, 63, 1);
+}
+section.states div.container div div.led6 {
+  width: 15px;
+  height: 15px;
+  background: rgb(198, 0, 0);
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 4px 2px rgb(139, 1, 1);
+}
+section.states div.container div div.led7 {
+  width: 15px;
+  height: 15px;
+  background: rgb(49, 39, 39);
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+@-webkit-keyframes led2 {
+  0% {
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 4px 4px rgb(0, 172, 0);
+  }
+  100% {
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+  }
+}
+
+@keyframes led2 {
+  0% {
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 4px 4px rgb(0, 172, 0);
+  }
+  100% {
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+  }
+}/*# sourceMappingURL=style.css.map */
