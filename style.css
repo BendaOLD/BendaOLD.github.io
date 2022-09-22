@@ -10,6 +10,10 @@ body {
   background: rgb(42, 42, 42);
 }
 
+h2, p {
+  color: white;
+}
+
 div.title {
   display: block;
   text-align: center;
