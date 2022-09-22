@@ -6,7 +6,8 @@ const states = [
     ["COMMENT SYSTEM", state(2), "OFF"],
     ["GET/POST", state(5), "OFF"],
     ["UPLOADING SYSTEM", state(7), "OFF"],
-    ["LINK/FETCH SYSTEM", state(6), "OFF"]
+    ["LINK/FETCH SYSTEM", state(6), "OFF"],
+    ["RESPONSIVE", state(7), "OFF"]
 ]
 
 function state(number) {
