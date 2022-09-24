@@ -1,13 +1,13 @@
 const states = [
-    ["Hosting", state(7), "OFF"],
-    ["Database", state(1), "OFF"],
-    ["Register system", state(1), "OFF"],
-    ["Login system", state(1), "OFF"],
-    ["Comment system", state(2), "OFF"],
-    ["GET/POST", state(5), "OFF"],
-    ["Uploading System", state(7), "OFF"],
-    ["Link/Fetching System", state(6), "OFF"],
-    ["Responsive", state(7), "OFF"]
+    [["Hosting", '<span class="material-symbols-outlined">public</span>'], state(7), "OFF"],
+    [["Database", '<span class="material-symbols-outlined">database</span>'], state(1), "OFF"],
+    [["Register System", '<span class="material-symbols-outlined">account_circle</span>'], state(1), "OFF"],
+    [["Login system", '<span class="material-symbols-outlined">login</span>'], state(1), "OFF"],
+    [["Comment system", '<span class="material-symbols-outlined">chat</span>'], state(2), "OFF"],
+    [["GET/POST", '<span class="material-symbols-outlined">swap_horiz</span>'], state(5), "OFF"],
+    [["Uploading System",'<span class="material-symbols-outlined">file_upload</span>'], state(7), "OFF"],
+    [["Link/Fetching System", '<span class="material-symbols-outlined">link</span>'], state(6), "OFF"],
+    [["Responsive", '<span class="material-symbols-outlined">smartphone</span>'], state(7), "OFF"]
 ]
 
 function state(number) {
@@ -28,8 +28,9 @@ states.forEach(container => {
     section.innerHTML += 
    `<div class="container">
         <div>
-            <h2>${container[0]}</h2>
+            <h2>${container[0][0]}</h2>
             <p></p>
+            ${container[0][1]}
         </div>
         <div>
             <p>${container[1][0]}</p>
