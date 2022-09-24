@@ -7,11 +7,15 @@
 }
 
 body {
-  background: rgb(42, 42, 42);
+  background: rgb(15, 15, 15);
+}
+
+h1, h2, p {
+  color: whitesmoke;
 }
 
 h2, p {
-  color: white;
+  font-family: monospace;
 }
 
 div.title {
@@ -22,7 +26,7 @@ div.title {
 
 section.states {
   margin: auto;
-  max-width: 70%;
+  width: 70%;
   margin-bottom: 40px;
 }
 section.states div.container {
@@ -30,13 +34,13 @@ section.states div.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(51, 51, 51);
-  border: 1px solid black;
+  background: rgb(8, 8, 8);
+  border-bottom: 1px solid rgb(30, 30, 30);
   padding: 20px 20px;
 }
 section.states div.container h2 {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 20px;
 }
 section.states div.container p {
   font-weight: 300;
@@ -70,7 +74,9 @@ section.states div.container div div.led1 {
   background: rgb(0, 255, 0);
   border-radius: 50%;
   margin-left: 15px;
-  box-shadow: 0 0 4px 4px green;
+  box-shadow: 0 0 4px 4px rgb(0, 172, 0);
+  -webkit-animation: led1 3s linear infinite;
+          animation: led1 3s linear infinite;
 }
 section.states div.container div div.led2 {
   width: 15px;
@@ -78,9 +84,8 @@ section.states div.container div div.led2 {
   background: rgb(0, 255, 0);
   border-radius: 50%;
   margin-left: 15px;
-  box-shadow: 0 0 4px 4px rgb(0, 172, 0);
-  -webkit-animation: led2 1s linear infinite;
-          animation: led2 1s linear infinite;
+  box-shadow: 0 0 1px 2px rgb(0, 172, 0);
+  opacity: 0.5;
 }
 section.states div.container div div.led3 {
   width: 15px;
@@ -122,7 +127,7 @@ section.states div.container div div.led7 {
   margin-left: 15px;
 }
 
-@-webkit-keyframes led2 {
+@-webkit-keyframes led1 {
   0% {
     box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
   }
@@ -134,7 +139,7 @@ section.states div.container div div.led7 {
   }
 }
 
-@keyframes led2 {
+@keyframes led1 {
   0% {
     box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
   }
@@ -143,5 +148,13 @@ section.states div.container div div.led7 {
   }
   100% {
     box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+  }
+}
+@media only screen and (max-width: 700px) {
+  section.states {
+    width: 90%;
+  }
+  section.states div.container h2 {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

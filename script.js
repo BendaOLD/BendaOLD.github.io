@@ -1,13 +1,13 @@
 const states = [
-    ["HOSTING", state(7), "OFF"],
-    ["DATABASE", state(1), "OFF"],
-    ["REGISTER SYSTEM", state(1), "OFF"],
-    ["LOGIN SYSTEM", state(1), "OFF"],
-    ["COMMENT SYSTEM", state(2), "OFF"],
+    ["Hosting", state(7), "OFF"],
+    ["Database", state(1), "OFF"],
+    ["Register system", state(1), "OFF"],
+    ["Login system", state(1), "OFF"],
+    ["Comment system", state(2), "OFF"],
     ["GET/POST", state(5), "OFF"],
-    ["UPLOADING SYSTEM", state(7), "OFF"],
-    ["LINK/FETCH SYSTEM", state(6), "OFF"],
-    ["RESPONSIVE", state(7), "OFF"]
+    ["Uploading System", state(7), "OFF"],
+    ["Link/Fetching System", state(6), "OFF"],
+    ["Responsive", state(7), "OFF"]
 ]
 
 function state(number) {
