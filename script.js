@@ -1,24 +1,27 @@
 const states = [
-    [["Hosting", '<span class="material-symbols-outlined">public</span>'], state(7), "OFF"],
-    [["Database", '<span class="material-symbols-outlined">database</span>'], state(1), "OFF"],
-    [["Register System", '<span class="material-symbols-outlined">account_circle</span>'], state(1), "OFF"],
-    [["Login system", '<span class="material-symbols-outlined">login</span>'], state(1), "OFF"],
-    [["Comment system", '<span class="material-symbols-outlined">chat</span>'], state(2), "OFF"],
-    [["GET/POST", '<span class="material-symbols-outlined">swap_horiz</span>'], state(5), "OFF"],
-    [["Uploading System",'<span class="material-symbols-outlined">file_upload</span>'], state(7), "OFF"],
-    [["Link/Fetching System", '<span class="material-symbols-outlined">link</span>'], state(6), "OFF"],
-    [["Responsive", '<span class="material-symbols-outlined">smartphone</span>'], state(7), "OFF"]
+    ["Hosting", 'public', state(7)],
+    ["Database", 'database', state(1)],
+    ["Register System", 'account_circle', state(1)],
+    ["Login system", 'login', state(1)],
+    ["Comment system", 'chat', state(1)],
+    ["GET/POST", 'swap_horiz', state(1)],
+    ["Server", 'dns', state(7)],
+    ["Uploading System",'file_upload', state(4)],
+    ["Link/Fetching System", 'link', state(7)],
+    ["Responsive", 'smartphone', state(7)]
 ]
+
+
 
 function state(number) {
     switch (number) {
-        case 1: return ["Operational", "led1"]
-        case 2: return ["Slow/Need Performance", "led2"]
-        case 3: return ["Degraded Performance", "led3"]
-        case 4: return ["Uploading", "led4"]
-        case 5: return ["In Mantenaince", "led5"]
-        case 6: return ["Fault", "led6"]
-        case 7: return ["Dead", "led7"]
+        case 1: return ["Operational", "led1"] //Full system works well without any issues.
+        case 2: return ["Slow/Need Performance", "led2"] //System doesn't work at 100% of his power, not a big problem.
+        case 3: return ["Degraded Performance", "led3"] //System meets a new problem.
+        case 4: return ["Uploading", "led4"] //System has turned off to upload a new feature.
+        case 5: return ["In Mantenaince", "led5"] //System has turned off to fix a bug.
+        case 6: return ["Fault", "led6"] //System has halted and at the moment isn't any way to fix
+        case 7: return ["Dead", "led7"] //System isn't alive or haven't been created.
     }
 }
 
@@ -28,13 +31,13 @@ states.forEach(container => {
     section.innerHTML += 
    `<div class="container">
         <div>
-            <h2>${container[0][0]}</h2>
+            <h2>${container[0]}</h2>
             <p></p>
-            ${container[0][1]}
+            <span class="material-symbols-outlined">${container[1]}</span>
         </div>
         <div>
-            <p>${container[1][0]}</p>
-            <div class="${container[1][1]}"></div>
+            <p>${container[2][0]}</p>
+            <div class="${container[2][1]}"></div>
         </div>
     </div>`
 });

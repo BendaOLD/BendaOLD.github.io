@@ -7,17 +7,37 @@
 }
 
 body {
-  background: rgb(15, 15, 15);
+  background: #000;
 }
 
 h1, h2, p {
   color: whitesmoke;
 }
 
+h1 {
+  font-weight: 300;
+  font-family: monospace;
+}
+h1.status {
+  margin-top: 5px;
+}
+h1.status::after {
+  content: "WORK IN PROGRESS";
+  color: rgb(49, 49, 211);
+}
+
 div.title {
   display: block;
   text-align: center;
-  margin: 50px 30px;
+  margin: 50px 0;
+}
+
+section.legend {
+  display: block;
+  text-align: center;
+}
+section.legend div {
+  display: flex;
 }
 
 section.states {
@@ -30,21 +50,22 @@ section.states div.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(8, 8, 8);
+  background: #000;
   border-bottom: 1px solid rgb(30, 30, 30);
-  padding: 20px 20px;
+  padding: 20px;
 }
 section.states div.container span.material-symbols-outlined {
   color: white;
   margin-left: 10px;
+  font-size: 30px;
 }
 section.states div.container h2 {
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 200;
+  font-size: 30px;
 }
 section.states div.container p {
-  font-weight: 200;
-  font-size: 13px;
+  font-weight: 100;
+  font-size: 20px;
 }
 section.states div.container div {
   display: flex;
@@ -56,72 +77,69 @@ section.states div.container div span:not(.material-symbols-outlined) {
   position: relative;
   z-index: 0;
 }
-section.states div.container div span:not(.material-symbols-outlined)::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  z-index: 2;
-  position: absolute;
-  background-color: gray;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-section.states div.container div div.led1 {
-  width: 15px;
-  height: 15px;
+
+div.led1 {
+  width: 17px;
+  height: 17px;
   background: rgb(0, 255, 0);
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 4px 4px rgb(0, 172, 0);
-  -webkit-animation: led1 3s linear infinite;
-          animation: led1 3s linear infinite;
+  -webkit-animation: led1 2s linear infinite;
+          animation: led1 2s linear infinite;
 }
-section.states div.container div div.led2 {
-  width: 15px;
-  height: 15px;
+
+div.led2 {
+  width: 17px;
+  height: 17px;
   background: rgb(0, 255, 0);
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 1px 2px rgb(0, 172, 0);
   opacity: 0.5;
+  -webkit-animation: led1 2s linear infinite;
+          animation: led1 2s linear infinite;
 }
-section.states div.container div div.led3 {
-  width: 15px;
-  height: 15px;
+
+div.led3 {
+  width: 17px;
+  height: 17px;
   background: #f1c40f;
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 4px 2px rgb(130, 109, 0);
 }
-section.states div.container div div.led4 {
-  width: 15px;
-  height: 15px;
+
+div.led4 {
+  width: 17px;
+  height: 17px;
   background: rgb(96, 106, 255);
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 4px 5px rgb(0, 40, 148);
 }
-section.states div.container div div.led5 {
-  width: 15px;
-  height: 15px;
+
+div.led5 {
+  width: 17px;
+  height: 17px;
   background: rgb(255, 123, 0);
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 4px 4px rgb(107, 63, 1);
 }
-section.states div.container div div.led6 {
-  width: 15px;
-  height: 15px;
+
+div.led6 {
+  width: 17px;
+  height: 17px;
   background: rgb(198, 0, 0);
   border-radius: 50%;
   margin-left: 15px;
   box-shadow: 0 0 4px 2px rgb(139, 1, 1);
 }
-section.states div.container div div.led7 {
-  width: 15px;
-  height: 15px;
+
+div.led7 {
+  width: 17px;
+  height: 17px;
   background: rgb(49, 39, 39);
   border-radius: 50%;
   margin-left: 15px;
@@ -129,25 +147,25 @@ section.states div.container div div.led7 {
 
 @-webkit-keyframes led1 {
   0% {
-    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
   }
   50% {
     box-shadow: 0 0 4px 4px rgb(0, 172, 0);
   }
   100% {
-    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
   }
 }
 
 @keyframes led1 {
   0% {
-    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
   }
   50% {
     box-shadow: 0 0 4px 4px rgb(0, 172, 0);
   }
   100% {
-    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
   }
 }
 @media (max-width: 700px) {
@@ -155,6 +173,12 @@ section.states div.container div div.led7 {
     max-width: 90%;
   }
   section.states div.container h2 {
-    font-size: 15px;
+    font-size: 25px;
+  }
+  section.states div.container p {
+    font-size: 20px;
+  }
+  section.states div.container span {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=style.css.map */
