@@ -8,10 +8,9 @@ const states = [
     ["Server", 'dns', state(7)],
     ["Uploading System",'file_upload', state(4)],
     ["Link/Fetching System", 'link', state(7)],
-    ["Responsive", 'smartphone', state(7)]
+    ["Responsive", 'smartphone', state(7)],
+    ["Front-End", 'palette', state(3)]
 ]
-
-
 
 function state(number) {
     switch (number) {
