@@ -6,8 +6,8 @@ const states = [
     ["Comment system", 'chat', state(1)],
     ["GET/POST", 'swap_horiz', state(1)],
     ["Server", 'dns', state(7)],
-    ["Uploading System",'file_upload', state(4)],
-    ["Link/Fetching System", 'link', state(7)],
+    ["Uploading System",'file_upload', state(1)],
+    ["Link/Fetching System", 'link', state(1)],
     ["Responsive", 'smartphone', state(7)],
     ["Front-End", 'palette', state(3)]
 ]
