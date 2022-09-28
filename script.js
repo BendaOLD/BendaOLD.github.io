@@ -1,5 +1,5 @@
 const states = [
-    ["Hosting", 'public', state(7)],
+    ["Hosting *thanks daniel <3*", 'public', state(1)],
     ["Database", 'database', state(1)],
     ["Register System", 'account_circle', state(1)],
     ["Login system", 'login', state(1)],
