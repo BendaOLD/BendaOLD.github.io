@@ -17,7 +17,7 @@ function state(number) {
         case 1: return ["Operational", "led1"] //Full system works well without any issues.
         case 2: return ["Slow/Need Performance", "led2"] //System doesn't work at 100% of his power, not a big problem.
         case 3: return ["Degraded Performance", "led3"] //System meets a new problem.
-        case 4: return ["Uploading", "led4"] //System has turned off to upload a new feature.
+        case 4: return ["Updating", "led4"] //System has turned off to upload a new feature.
         case 5: return ["In Mantenaince", "led5"] //System has turned off to fix a bug.
         case 6: return ["Fault", "led6"] //System has halted and at the moment isn't any way to fix
         case 7: return ["Dead", "led7"] //System isn't alive or haven't been created.
