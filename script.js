@@ -1,8 +1,8 @@
 const states = [
     ["Hosting *thanks daniel <3*", 'public', state(1)],
     ["Database", 'database', state(1)],
-    ["Register System", 'account_circle', state(1)],
-    ["Login system", 'login', state(1)],
+    ["Register System", 'account_circle', state(4)],
+    ["Login system", 'login', state(4)],
     ["Comment system", 'chat', state(1)],
     ["GET/POST", 'swap_horiz', state(1)],
     ["Server", 'dns', state(1)],
