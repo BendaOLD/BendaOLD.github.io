@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Outfit", serif;
+    user-select: none;
 }
 
 body {
@@ -23,7 +24,7 @@ h1 {
     }
     &.status::after {
         content: "WORK IN PROGRESS";
-        color: rgb(49, 49, 211);
+        color: #3131d3;
     }
 }
 
@@ -82,29 +83,30 @@ section.states {
 div.led1 {
     width: 17px;
     height: 17px;
-    background: rgb(0, 255, 0);
+    background: #00ff00;
     border-radius: 50%;
     margin-left: 15px;
-    box-shadow: 0 0 4px 4px rgb(0, 172, 0);
+    box-shadow: 0 0 4px 4px #00ac00;
     animation: led1 2s linear infinite;
 }
 div.led2 {
     width: 17px;
     height: 17px;
-    background: rgb(0, 255, 0);
+    background: #00ff00;
     border-radius: 50%;
     margin-left: 15px;
-    box-shadow: 0 0 1px 2px rgb(0, 172, 0);
+    box-shadow: 0 0 1px 2px #00ac00;
     opacity: .5;
     animation: led1 2s linear infinite;
 }
 div.led3 {
     width: 17px;
     height: 17px;
-    background: #f1c40f;
+    background: #ffcc00;
     border-radius: 50%;
     margin-left: 15px;
-    box-shadow: 0 0 4px 2px rgb(130, 109, 0);
+    box-shadow: 0 0 4px 4px #856f00;
+    animation: led3 2s linear infinite;
 }
 div.led4 {
     width: 17px;
@@ -139,29 +141,37 @@ div.led7 {
 }
 
 @keyframes led1 {
-    0% {
-        box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
-    }
-    50% {
-        box-shadow: 0 0 4px 4px rgb(0, 172, 0);
-    }
-    100% {
-        box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6);
-    }
+    0% { box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6); }
+    50% { box-shadow: 0 0 4px 4px rgb(0, 172, 0); }
+    100% { box-shadow: 0 0 4px 4px rgba(0, 128, 0, 0.6); }
 }
 
-@media (max-width: 700px) {
+@keyframes led3 {
+    0% { box-shadow: 0 0 4px 4px #755e00; }
+    50% { box-shadow: 0 0 4px 4px #bb9911; }
+    100% { box-shadow: 0 0 4px 4px #755e00; }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 15px;
+    }
     section.states {
-        max-width: 90%;
+        max-width: 80%;
+        
         div.container {
             h2 {
-                font-size: 25px;
-            }
-            p {
                 font-size: 20px;
             }
-            span {
+            p {
+                font-size: 15px;
+            }
+            span.material-symbols-outlined {
                 font-size: 25px;
+            }
+            div.led {
+                width: 13px;
+                height: 13px;
             }
         }
     }
