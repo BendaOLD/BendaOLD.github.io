@@ -54,7 +54,7 @@ const states = [
         "icon": 'smartphone',
         "state": state(7)
     }
-    ]
+]
 
 function state(number) {
     switch (number) {
