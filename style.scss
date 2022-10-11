@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Outfit", serif;
-    user-select: none;
+    //user-select: none;
 }
 
 body {
@@ -21,10 +21,11 @@ h1 {
     font-family: monospace;
     &.status {
         margin-top: 5px;
-    }
-    &.status::after {
-        content: "WORK IN PROGRESS";
-        color: #3131d3;
+        span {
+            color: #3131dd;
+            font-size: 25px;
+            font-family: monospace;
+        }
     }
 }
 
@@ -154,17 +155,22 @@ div.led7 {
 
 @media (max-width: 800px) {
     h1 {
-        font-size: 15px;
+        font-size: 20px;
+        &.status {
+            display: flex;
+            flex-direction: column;
+        }
     }
     section.states {
         max-width: 80%;
         
         div.container {
+            display: block;
             h2 {
-                font-size: 20px;
+                font-size: 25px;
             }
             p {
-                font-size: 15px;
+                font-size: 20px;
             }
             span.material-symbols-outlined {
                 font-size: 25px;

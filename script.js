@@ -83,5 +83,7 @@ states.forEach(container => {
             <div class="${container.state[1]} led"></div>
         </div>
     </div>`
-});
+})
+
+//todo: fetch to see on/off server
 
