@@ -12,17 +12,17 @@ const states = [
     {
         "system": "Register System",
         "icon": 'account_circle',
-        "state": state(2)
+        "state": state(1)
     },
     {
         "system": "Login System",
         "icon": 'login',
-        "state": state(2)
+        "state": state(1)
     },
     {
         "system": "Comment System",
         "icon": 'chat',
-        "state": state(2)
+        "state": state(4)
     },
     {
         "system": "GET/POST",
@@ -37,7 +37,7 @@ const states = [
     {
         "system": "Uploading System",
         "icon": 'file_upload',
-        "state": state(6)
+        "state": state(2)
     },
     {
         "system": "Link/Fetching System",
