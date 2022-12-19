@@ -45,7 +45,8 @@ section.legend {
 
 section.states {
     margin: auto;
-    max-width: 70%;
+    width: 100%;
+    max-width: 800px;
     margin-bottom: 40px;
     div.container {
         width: 100%;
@@ -153,7 +154,7 @@ div.led7 {
     100% { box-shadow: 0 0 4px 4px #755e00; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
     h1 {
         font-size: 20px;
         &.status {
@@ -162,7 +163,8 @@ div.led7 {
         }
     }
     section.states {
-        max-width: 80%;
+        width: 100%;
+        max-width: 400px;
         
         div.container {
             display: block;

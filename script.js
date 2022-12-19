@@ -12,12 +12,12 @@ const states = [
     {
         "system": "Register System",
         "icon": 'account_circle',
-        "state": state(2)
+        "state": state(1)
     },
     {
         "system": "Login System",
         "icon": 'login',
-        "state": state(2)
+        "state": state(1)
     },
     {
         "system": "Comment System",
@@ -27,7 +27,7 @@ const states = [
     {
         "system": "GET/POST",
         "icon": 'swap_horiz',
-        "state": state(1)
+        "state": state(2)
     },
     {
         "system": "Server",
@@ -37,7 +37,7 @@ const states = [
     {
         "system": "Uploading System",
         "icon": 'file_upload',
-        "state": state(6)
+        "state": state(1)
     },
     {
         "system": "Link/Fetching System",
@@ -47,12 +47,12 @@ const states = [
     {
         "system": "Front-End",
         "icon": 'palette',
-        "state": state(5)
+        "state": state(2)
     },
     {
         "system": "Responsive",
         "icon": 'smartphone',
-        "state": state(7)
+        "state": state(2)
     }
 ]
 
