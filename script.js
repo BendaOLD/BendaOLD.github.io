@@ -22,7 +22,7 @@ const states = [
     {
         "system": "Comment System",
         "icon": 'chat',
-        "state": state(2)
+        "state": state(4)
     },
     {
         "system": "GET/POST",
